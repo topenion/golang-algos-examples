@@ -19,10 +19,7 @@ func sort(array []int) []int {
 			if array[i] > array[i+1] {
 				array[i], array[i+1] = array[i+1], array[i]
 			}
-
 		}
-
 	}
-
 	return array
 }
