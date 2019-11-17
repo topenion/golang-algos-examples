@@ -14,14 +14,13 @@ func main() {
 
 func sort(array []int) []int {
 	length := len(array)
-	for sorted := 0; sorted < length-1; sorted++ {
-		for i := length - 1; i > sorted; i-- {
-			if array[i-1] > array[i] {
-				array[i-1], array[i] = array[i], array[i-1]
+	for pivot := length - 1; pivot > 0; pivot-- {
+		for i := 0; i < pivot; i++ {
+			if array[i] > array[i+1] {
+				array[i], array[i+1] = array[i+1], array[i]
 			}
 
 		}
-		fmt.Printf("Array after iteration %v is %v\n", sorted+1, array)
 
 	}
 
